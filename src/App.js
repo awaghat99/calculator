@@ -51,18 +51,31 @@ const App = () => {
     }
   };
 
+  const getButtonType = (button) => {
+    if (/[0-9.del]/.test(button)) {
+      return "number";
+    } else if (/[+\-*/()]/.test(button)) {
+      return "operator";
+    } else if (/=/.test(button)) {
+      return "equals";
+    } else if (/C/.test(button)) {
+      return "C";
+    }
+  };
+
   return (
     <div className="App">
       <div className="whole-calculator">
         <div className="screen">
-          <h2>The expression is: {expression}</h2>
-          <h2>The number is:{evaluation}</h2>
+          <h2 className="expression">{expression}</h2>
+          <h2 className="expression">{evaluation}</h2>
         </div>
         <div className="button-card">
           {buttons.map((button, index) => {
             return (
               <Buttons
                 key={index}
+                buttonType={getButtonType(button)}
                 label={button}
                 handleButtonClick={() => {
                   handleButtonClick(button);

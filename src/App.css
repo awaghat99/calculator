@@ -1,10 +1,24 @@
-.App {
-  text-align: center;
+.whole-calculator {
+  width: fit-content;
+  margin: auto;
+  margin-top: 50px;
+  background-color: #352f44;
+  border-radius: 20px;
+  padding: 15px 10px;
+  color: #faf0e6;
 }
 
-.whole-calculator {
-  width:fit-content;
-  margin: auto;
+.screen {
+  background-color: #5c5470;
+  position: relative;
+  min-height: 80px;
+  border-radius: 20px;
+  padding: 10px 15px;
+  text-align: right;
+}
+.expression {
+  min-height: 40px;
+  margin: 0;
 }
 
 .button-card {
@@ -26,8 +40,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  background-color: #b5a1a1;
+}
+
+.number {
+  background-color: #4db0f1;
+}
+
+.operator {
+  background-color: #f17d71;
+}
+
+.equals {
+  background-color: #de3b29;
+}
+
+.C {
+  background-color: #ec8909;
 }
